@@ -6,8 +6,8 @@
 序列长度计算的是序列本身的长度加一
 
 对输入是序列本身长度加上\</s>结束符，即输入到attention_mechinism 里面的长度
-对输出，训练时是<s> 加上序列本身长度，即train_helper 里面的sequence_length
-计算loss 时需要进行mask，此时需要拿预测输出与原有的标签比较 比较的序列是原序列本身加上 </s> 即 tf.sequence_mask 里面传入 y_input_len
+对输出，训练时是 \<s> 加上序列本身长度，即train_helper 里面的sequence_length
+计算loss 时需要进行mask，此时需要拿预测输出与原有的标签比较 比较的序列是原序列本身加上 \</s> 即 tf.sequence_mask 里面传入 y_input_len
 
 
 采用传统attention
